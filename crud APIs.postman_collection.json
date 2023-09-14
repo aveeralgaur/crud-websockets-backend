@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "0b449d71-8432-4784-a26c-2c1c66021acb",
+		"name": "crud APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26364822",
+		"_collection_link": "https://universal-eclipse-290711.postman.co/workspace/Team-Workspace~127ad1a4-6d67-42e4-8398-c9d1b541165e/collection/26364822-0b449d71-8432-4784-a26c-2c1c66021acb?action=share&creator=26364822&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/auth/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\":\"aveeral\",\n    \"lastName\":\"gaur\",\n    \"email\":\"aveeral.g@gmail.com\",\n    \"password\":\"Dude@1234$\",\n    \"confirmPassword\":\"Dude@1234$\",\n    \"phoneNumber\":7007814815\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/auth/updatePassword",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDMxZjBmZGY4NjNjMTYwZTFlNTMyNSIsImlhdCI6MTY5NDcwMzM4MywiZXhwIjoxNjk0Nzg5NzgzfQ.K_e0eHWCb4Q9qH8HgVZkOstF9jp1JpYxHrJhLDZ0UEY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"currentPassword\":\"Dude@234$\",\n    \"newPassword\":\"Dude@1234$\",\n    \"confirmPassword\":\"Dude@1234$\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/updatePassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"updatePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"aveeral.g@gmail.com\",\n    \"password\":\"Dude@1234$\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/auth/getPhoneNumber",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDMxZjBmZGY4NjNjMTYwZTFlNTMyNSIsImlhdCI6MTY5NDcwMzM4MywiZXhwIjoxNjk0Nzg5NzgzfQ.K_e0eHWCb4Q9qH8HgVZkOstF9jp1JpYxHrJhLDZ0UEY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/getPhoneNumber",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"getPhoneNumber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/auth/deleteMyProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDMxZjBmZGY4NjNjMTYwZTFlNTMyNSIsImlhdCI6MTY5NDcwMzM4MywiZXhwIjoxNjk0Nzg5NzgzfQ.K_e0eHWCb4Q9qH8HgVZkOstF9jp1JpYxHrJhLDZ0UEY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/deleteMyProfile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"deleteMyProfile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
