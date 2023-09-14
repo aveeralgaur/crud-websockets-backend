@@ -4,5 +4,5 @@ This repository contains code for signup, login, authentication and authorisatio
 
 #Env cred for using it locally:
 DB_URI=mongodb://localhost:27017
-JWT_SECRET=heyitsaveeral
+JWT_SECRET=heyitsaveeralyo!
 JWT_EXPIRES=1d
